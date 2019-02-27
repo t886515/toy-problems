@@ -1,13 +1,10 @@
-
 // class ListNode {
 //     constructor(val) {
 //         this.val = val;
 //         this.next = null;
 //     }
 
-//     get 
-
-
+//     get
 
 //     ComposeListNode(valArray) {
 //         //uses
@@ -22,19 +19,24 @@
 // }
 
 function ListNode(val) {
-    this.val = val;
-    this.next = null;
+  this.val = val;
+  this.next = null;
 }
 
-const composedListNodes = (valArray) => {
-    let list = new ListNode(0);
-    valArray.reduce((acc, val) => {
-        acc.next = new ListNode(val);
-        return acc.next;
-    }, list);
-    return list.next;
-
-}
+const composedListNodes = (valArray, createCylical) => {
+  let list = new ListNode(0);
+  let last;
+  valArray.reduce((acc, val, index) => {
+    acc.next = new ListNode(val);
+    if (index === valArray.length - 1) {
+      last = acc.next;
+    }
+    return acc.next;
+  }, list);
+  if (createCylical) {
+    last.next = list.next;
+  }
+  return list.next;
+};
 
 module.exports = composedListNodes;
-
