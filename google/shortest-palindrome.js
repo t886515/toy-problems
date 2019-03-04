@@ -2,6 +2,8 @@
  * @param {string} s
  * @return {string}
  */
+
+// NEED TO REVISIT FOR KMP ALGORITHM
 // var shortestPalindrome = function(s) {
 //   let foundPalindrome = false;
 //   let tail = s.length - 1;
