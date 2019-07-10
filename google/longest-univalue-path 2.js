@@ -10,9 +10,9 @@
  * @return {number}
  */
 
-const { constructTreeWithArray } = require('../helpers');
+const { constructOneNode, constructTreeWithArray } = require('../binary-tree-constructor');
 
-let longestUnivaluePath = function(root) {
+let longestUnivaluePath = function (root) {
   let longest = 0;
 
   function dfs(node) {

@@ -9,7 +9,7 @@
  * @param {ListNode[]} lists
  * @return {ListNode}
  */
-const { composedListNodes } = require('./helpers.js');
+const composedListNodes = require('./helpers.js');
 
 function ListNode(val) {
   this.val = val;
