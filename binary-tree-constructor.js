@@ -14,10 +14,10 @@ const constructTreeWithArray = (array) => {
   while (i < array.length) {
     let currentParent = stack[y];
     y++;
-    if (!currentParent.left) currentParent.left = new TreeNode(array[i]);
+    if (!currentParent.left) currentParent.left = array[i] === null? null : new TreeNode(array[i]);
     stack.push(currentParent.left);
     i++;
-    if (!currentParent.right) currentParent.right = new TreeNode(array[i]);
+    if (!currentParent.right) currentParent.right = array[i] === null? null : new TreeNode(array[i]);
     stack.push(currentParent.right);
     i++;
   }

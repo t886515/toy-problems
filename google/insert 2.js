@@ -16,7 +16,7 @@ function Node(val, next) {
   this.next = next;
 }
 
-const { composedListNodes } = require('../helpers');
+const composedListNodes = require('../helpers');
 var insert = function(head, insertVal) {
   if (head === null && typeof insertVal === 'number') {
     let newNode = new Node(insertVal, null);
