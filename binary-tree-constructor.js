@@ -26,5 +26,6 @@ const constructTreeWithArray = (array) => {
 
 module.exports = {
   constructOneNode,
-  constructTreeWithArray
+  constructTreeWithArray,
+  TreeNode
 };

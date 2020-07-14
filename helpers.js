@@ -88,5 +88,7 @@ module.exports = {
   constructOneNode,
   constructTreeWithArray,
   composedListNodes,
-  Graph
+  Graph,
+  TreeNode,
+  ListNode
 };
